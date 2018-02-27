@@ -1,3 +1,6 @@
+-- Find Duplicate Indices
+-- Author: Unknown
+
 -- View: maint_index_find_dupes
 
 -- DROP VIEW maint_index_find_dupes;
