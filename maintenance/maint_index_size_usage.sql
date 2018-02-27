@@ -1,3 +1,6 @@
+-- View size and usage statistics for indices
+-- Author: Unknown
+
 -- View: maint_index_size_usage
 
 -- DROP VIEW maint_index_size_usage;
