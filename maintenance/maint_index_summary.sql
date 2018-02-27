@@ -1,3 +1,6 @@
+-- Summary View for Indices
+-- Author: Unknown
+
 -- View: maint_index_summary
 
 -- DROP VIEW maint_index_summary;
