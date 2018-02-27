@@ -1,5 +1,5 @@
 -- View size and usage statistics for indices
--- Author: Unknown
+-- Author: Unknown, modified by Lyjia
 
 -- View: maint_index_size_usage
 
@@ -11,6 +11,8 @@ CREATE OR REPLACE VIEW maint_index_size_usage AS
     c.reltuples AS num_rows,
     pg_size_pretty(pg_relation_size(quote_ident(t.tablename::text)::regclass)) AS table_size,
     pg_size_pretty(pg_relation_size(quote_ident(foo.indexrelname::text)::regclass)) AS index_size,
+    pg_relation_size(quote_ident(t.tablename::text)::regclass) AS table_size_int,
+    pg_relation_size(quote_ident(foo.indexrelname::text)::regclass) AS index_size_int,
         CASE
             WHEN x.is_unique = 1 THEN 'Y'::text
             ELSE 'N'::text
